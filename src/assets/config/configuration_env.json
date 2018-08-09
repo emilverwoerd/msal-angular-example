@@ -1,0 +1,9 @@
+
+{
+  "clientID": "$CLIENT_ID",
+  "graphScopes": ["openid"],
+      "signUpSignInAuthority":  "$SIGNUP_SIGNIN_AUTHORITY",
+      "passwordresetAuthority": "$PASSWORD_RESET_AUTHORITY",
+      "popup": false,
+      "redirectUrl": "$REDIRECT_URL"
+}

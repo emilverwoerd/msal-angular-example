@@ -1,0 +1,9 @@
+
+{
+  "clientID": "982299c5-5f9c-41cf-8792-ce501079dd78",
+  "graphScopes": ["openid"],
+      "signUpSignInAuthority":  "https://login.microsoftonline.com/tfp/AgrifirmB2CDev.onmicrosoft.com/B2C_1A_AgrifirmB2CSignupSigninComplete",
+      "passwordresetAuthority": "https://login.microsoftonline.com/tfp/AgrifirmB2CDev.onmicrosoft.com/B2C_1A_AgrifirmB2CPasswordReset",
+      "popup": false,
+      "redirectUrl": "http://localhost:4200"
+}

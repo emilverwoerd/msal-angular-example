@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MsalService } from 'msal-angular';
+import { MsalService } from 'agri-msal-angular';
+import { from, Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-toolbar',
@@ -8,9 +9,13 @@ import { MsalService } from 'msal-angular';
 })
 export class ToolbarComponent implements OnInit {
 
+  private _authenticated: boolean;
   constructor(private msalService: MsalService) { }
 
   ngOnInit() {
+    from(this.msalService.authenticated).subscribe((data) => {
+      this._authenticated = data;
+    });
   }
 
   login() {
@@ -22,6 +27,6 @@ export class ToolbarComponent implements OnInit {
   }
 
   get authenticated(): boolean {
-    return this.msalService.authenticated;
+    return this._authenticated; // from(this.msalService.authenticated);
   }
 }
